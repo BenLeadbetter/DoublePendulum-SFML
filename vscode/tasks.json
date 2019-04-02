@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "debug",
+            "type": "shell",
+            "command": "",
+            "args": ["g++","-g", "${relativeFile}", "-o","a.exe"]
+        },
+        {
+            "label": "Compile and run",
+            "type": "shell",
+            "command": "",
+            "args": [
+                "g++",
+                "-Wall",
+                "${relativeFile}", 
+                "-o",
+                "${fileBasenameNoExtension}-app", 
+                "-lsfml-graphics",
+                "-lsfml-audio",
+                "-lsfml-window", 
+                "-lsfml-system",
+                "&&",
+                "clear",
+                "&&",
+                "./${fileBasenameNoExtension}-app"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true  
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": ["relative", "${fileDirname}"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        
+    ]
+}
