@@ -189,13 +189,6 @@ int main()
         // Show everything we just drew
         window.display();
 
-        //Delay the loop renewing to save computer power
-        float iteration_time = (clock.getElapsedTime()).asSeconds();
-        while(iteration_time < 1 / MAX_LOOP_RATE)
-        {
-            iteration_time = (clock.getElapsedTime()).asSeconds();
-        }
-
     } // End main loop
 
     return 0;
