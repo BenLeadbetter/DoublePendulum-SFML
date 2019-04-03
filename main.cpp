@@ -35,9 +35,6 @@ int main()
     // Create a variable to control time
     Clock clock;
 
-    // Set max number of iterations per second
-    const float MAX_LOOP_RATE = 1000;
-
 
     // Create the background: a white rectangle
     RectangleShape background;
